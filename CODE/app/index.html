@@ -1,0 +1,178 @@
+<html>
+    <head>
+        <link href="css/style.css" rel="stylesheet">
+        <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+        <!-- Bootstrap CSS -->
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css"
+        integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>DApp</title>
+    </head>
+    <body>
+       
+        <!-- page header -->
+        <div id="page-header" class="row">
+            <div class="col-sm-12">
+              
+                <button id='loginShow' class="btn btn-outline-secondary btn-black text-uppercase filter-btn m-2">Login</button>
+                <button id='createShow' class="btn btn-outline-secondary btn-black text-uppercase filter-btn m-2">Create Item</button>
+                <button id="listShow" class="btn btn-outline-secondary btn-black text-uppercase filter-btn m-2">List</button>
+                <button id='shopShow' class="btn btn-outline-secondary btn-black text-uppercase filter-btn m-2">Shop</button>
+                <button id='myCollectionShow' class="btn btn-outline-secondary btn-black text-uppercase filter-btn m-2">My Collection</button>
+            </div><!--./col-sm-12-->
+        </div><!--./row-->
+        
+        <div class="container">
+            <!-- login section -->
+            <div class="card" id="loginSection">
+                <!-- Log in button -->
+                <div class="row">
+                  <div class="col-sm-12">
+                    <h2 class="pink">Log in</h2>
+                  </div>
+                </div>
+                <div class="row">
+                  <form id="log-in" class="col-sm-12">
+                    <div class="form-group">
+                      <label for="task-content">Account</label>
+                      <input id="account" type="text" class="form-control"></input>
+                    </div>
+                    <div class="form-group">
+                      <label for="task-author">Password</label>
+                      <input id="password" type="text" class="form-control"></input>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Submit</button>
+                  </form>
+                </div><!--./row-->
+            </div><!--./card-->
+
+            <!--Create item section-->
+            <div class="card" id="createSection">
+                <!-- Create Tasks button -->
+                <div class="row">
+                  <div class="col-sm-12">
+                    <h2 class="pink">Create Item</h2>
+                  </div>
+                </div>
+                <div class="row">
+                  <form id="new-task" class="col-sm-12">
+                    <div class="form-group">
+                      <label for="task-content">Content</label>
+                      <input id="task-content" type="text" class="form-control"></input>
+                    </div>
+                    <div class="form-group">
+                      <label for="task-author">Money</label>
+                      <input id="task-author" type="text" class="form-control"></input>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Submit</button>
+                  </form>
+                </div><!--./row-->
+            </div><!--./card-->
+
+            <!-- Tasks List -->
+            <div class="card" id="listSection">
+                    <div class="row">
+                    <div class="col-sm-12">
+                        <h2 class="pink">Items</h2>
+                    </div><!--./col-sm-12-->
+                    </div><!--./row-->
+                    <div class="row">
+                    <div class="col-sm-12">
+                        <table class="table">
+                        <thead>
+                            <tr>
+                            <th>ID</th>
+                            <th>Date</th>
+                            <th>Content</th>
+                            <th>Money</th>
+                           
+                            </tr>
+                        </thead>
+                        <tbody id="tasks">
+                            <!-- tasks here -->
+                        </tbody>
+                        </table>
+                    </div><!--./col-sm-12-->
+                    </div><!--./row-->
+            </div><!--./card-->
+
+            <!-- store -->
+            <section id="store" class="store py-5">
+                <div class="container">
+                <!-- section title -->
+                <div class="row">
+                    <div class="col-10 mx-auto col-sm-6 text-center">
+                    <h1 class="text-capitalize">our <strong class="banner-title ">store</strong></h1>
+                    </div>
+                </div>
+                <!-- end of section title -->
+                
+                
+                <!-- store  items-->
+                <div class="row" class="store-items" id="store-items">
+                    
+
+                </div>
+            </section>
+            <!--end of store items -->
+
+
+
+
+            <!-- my collection -->
+            <section id="myCollection" class="store py-5">
+                <div class="container">
+                <!-- section title -->
+                <div class="row">
+                    <div class="col-10 mx-auto col-sm-6 text-center">
+                    <h1 class="text-capitalize">our <strong class="banner-title ">store</strong></h1>
+                    </div>
+                </div>
+                <!-- end of section title -->
+                <!--filter buttons -->
+                
+                <!--end of filter buttons -->
+                <!-- store  items-->
+                <div class="row" class="store-items" id="store-items-2">
+                    
+                </div>
+            </section>
+            <!--end of my collection -->
+
+            <div class="container col-sm-4 col-md-7 col-lg-4 mt-5">
+                    <div class="card">
+                        <h3 class="card-header" id="monthAndYear"></h3>
+                        <table class="table table-bordered table-responsive-sm" id="calendar">
+                            <thead>
+                            <tr>
+                                <th>Sun</th>
+                                <th>Mon</th>
+                                <th>Tue</th>
+                                <th>Wed</th>
+                                <th>Thu</th>
+                                <th>Fri</th>
+                                <th>Sat</th>
+                            </tr>
+                            </thead>
+                
+                            <tbody id="calendar-body">
+                
+                            </tbody>
+                        </table>
+                
+                       
+                        <br/>
+                        
+                    </div>
+            </div>
+
+
+        </div>
+        
+      
+        
+        <script src="dist/bundle.js"></script>
+    </body>
+</html>
